@@ -1,13 +1,14 @@
 # Sabor da Maria
 
-Consultora de cardápio e precificação para o delivery da Dona Maria.
-O sistema transforma a planilha da despensa num cardápio de lançamento
-precificado, por uma conversa stateful guiada por tools.
+Menu and pricing consultant for Dona Maria's delivery.
+The system turns the pantry spreadsheet into a priced launch menu,
+through a stateful, tool-guided conversation.
 
-O agente (Hermes) pesquisa receitas reais na web e conduz a entrevista.
-O servidor MCP guarda o estado, deriva requisitos da receita, cruza
-ingredientes com a despensa e calcula CMV e preços com aritmética
-determinística. Nenhum valor financeiro é inventado pelo modelo.
+The agent (Hermes) researches real recipes on the web and runs the
+interview. The MCP server holds state, derives recipe requirements,
+matches ingredients against the pantry, and calculates CMV and prices
+with deterministic arithmetic. No financial figure is invented by the
+model.
 
 ## Central design decision
 
