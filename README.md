@@ -36,7 +36,12 @@ deterministic. So I chose MCP as the contract between Hermes and the workflow.
 I chose Claude Haiku 4.5 on cost-benefit. The model only talks to Dona
 Maria and researches recipes; gates, CMV, and prices are deterministic,
 so a cheaper, faster model is enough for the interview without
-compromising the results.
+compromising the results. Set it in Hermes (`~/.hermes`); it is not
+pinned in this repo.
+
+`.hermes.md` is the context file (Portuguese UX and gates). Memory is
+SQLite, not Hermes session memory, state survives restarts and commits
+with the budget. **No Hermes skills**: the MCP tools already gate the flow.
 
 ## Architecture
 
