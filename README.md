@@ -30,6 +30,13 @@ MCP keeps the conversation in the agent: each tool is a testable
 transition, without an extra API call that leaves the sequence no more
 deterministic. So I chose MCP as the contract between Hermes and the workflow.
 
+## Model selection
+
+I chose Claude Haiku 4.5 on cost-benefit. The model only talks to Dona
+Maria and researches recipes; gates, CMV, and prices are deterministic,
+so a cheaper, faster model is enough for the interview without
+compromising the results.
+
 ## Architecture
 
 ```
