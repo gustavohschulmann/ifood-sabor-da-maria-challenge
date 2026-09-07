@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sabor da Maria — consultora de cardápio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css?v=16" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand-logo" src="/assets/ifood-43.png" alt="iFood" />
+        <span class="brand-mark" aria-hidden="true">SM</span>
+        <div>
+          <h1>Sabor da Maria</h1>
+          <p>Consultora de cardápio e precificação</p>
+        </div>
+      </div>
+      <div class="topbar-status">
+        <div class="budget" id="budget">
+          <span class="budget-label">Orçamento restante</span>
+          <strong id="budget-value">R$ 80,00</strong>
+        </div>
+        <button type="button" class="reset" id="reset-btn">Resetar demo</button>
+      </div>
+    </header>
+
+    <p class="banner hidden" id="banner" role="status"></p>
+
+    <main class="layout">
+      <section class="chat-panel" aria-label="Conversa">
+        <div class="chat-log" id="chat-log">
+          <div class="welcome" id="welcome">
+            <p>
+              Converse com a consultora como a Dona Maria, ou clique em
+              <strong>Resetar demo</strong> para começar do zero com a despensa
+              da planilha.
+            </p>
+          </div>
+        </div>
+        <form class="composer" id="composer">
+          <p class="turn-status" id="turn-status" hidden role="status"></p>
+          <div class="composer-row">
+            <label class="sr-only" for="message">Mensagem da Dona Maria</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="2"
+              placeholder="Escreva como a Dona Maria…"
+              required
+            ></textarea>
+            <button type="submit" id="send-btn">Enviar</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="menu-panel" aria-label="Cardápio">
+        <section>
+          <h2>Cardápio de lançamento</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Prato</th>
+                  <th>CMV</th>
+                  <th>Preço</th>
+                  <th>Lucro</th>
+                  <th>Cenário</th>
+                </tr>
+              </thead>
+              <tbody id="menu-body">
+                <tr class="empty-row">
+                  <td colspan="5">Nenhum prato aceito ainda.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <h2>Em andamento</h2>
+          <ul class="candidates" id="candidates">
+            <li class="muted">Nenhuma candidata ainda.</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+
+    <script src="/app.js?v=16"></script>
+  </body>
+</html>
